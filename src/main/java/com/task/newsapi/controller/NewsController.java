@@ -2,7 +2,6 @@ package com.task.newsapi.controller;
 
 import com.task.newsapi.domain.News;
 import com.task.newsapi.service.NewsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
