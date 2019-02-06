@@ -16,6 +16,9 @@ public class NewsController {
         this.newsService = newsService;
     }
 
+//    @GetMapping("/login")
+//    public
+
     @GetMapping("/news")
     public List<News> allNews() {
         return newsService.allNews();
@@ -26,19 +29,19 @@ public class NewsController {
         return newsService.getById(id);
     }
 
-    @Secured("")
+    @Secured("ADMIN")
     @PostMapping("/news")
     public News create(@RequestBody News news) {
         return newsService.create(news);
     }
 
-    @Secured("")
+    @Secured("ADMIN")
     @PutMapping("/news/{id}")
     public News update(@RequestBody News news,@PathVariable("id") Long id) {
         return newsService.update(news, id);
     }
 
-    @Secured("")
+    @Secured("ADMIN")
     @DeleteMapping("/news/{id}")
     public void delete(@PathVariable("id") Long id) {
         newsService.delete(id);
