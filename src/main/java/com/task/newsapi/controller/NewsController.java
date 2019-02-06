@@ -16,9 +16,6 @@ public class NewsController {
         this.newsService = newsService;
     }
 
-//    @GetMapping("/login")
-//    public
-
     @GetMapping("/news")
     public List<News> allNews() {
         return newsService.allNews();
